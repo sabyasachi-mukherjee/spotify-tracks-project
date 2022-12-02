@@ -127,3 +127,6 @@ dmypy.json
 
 # Pyre type checker
 .pyre/
+dataset/tracks.csv
+exploratory_analysis.ipynb
+plan.txt
