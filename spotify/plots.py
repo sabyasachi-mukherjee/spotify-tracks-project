@@ -24,6 +24,11 @@ class SpotifyPlots:
         plt.xlabel(f"quantile_{column_name}")
         plt.xticks(rotation=90)
         plt.show()
+    @classmethod
+    def enough_datapoints_qcut(cls, dataframe: pd.DataFrame, column_name = "danceability"):
+        dataframe_new = dataframe.copy()
+        dataframe_new['qcut']  = pd.qcut(dataframe_new[column_name], q = 5, duplicates= 'drop')
+        return dataframe_new.groupby('qcut').size()
     
 
         
