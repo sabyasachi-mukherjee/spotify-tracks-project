@@ -11,12 +11,8 @@ class DataTransformations:
         df["time_signature"] = df["time_signature"].astype("category")
         df["mode"] = df["mode"].astype("category")
         df["explicit"] = df["explicit"].astype("category")
-        # df['popular_or_not'] = df['popularity']>= 64
-        # df['popular_or_not'] = df['popular_or_not'].astype(int)
+        df["popularity"] = (
+            df["popularity"] >= 64
+        )  # 90th percentile of popularity for tracks released in and after 2012
+        df["popularity"] = df["popularity"].astype(int)
         return df.query("release_date>= 2012").query("key != -1").drop_duplicates()
-    
-
-
-
-
-
