@@ -16,3 +16,9 @@ class DataTransformations:
         )  # 90th percentile of popularity for tracks released in and after 2012
         df["popularity"] = df["popularity"].astype(int)
         return df.query("release_date>= 2012").query("key != -1").drop_duplicates()
+    @classmethod
+    def process(cls, df: pd.DataFrame) -> pd.DataFrame:
+        df["popularity"] = df["popularity"].astype("category")
+        removed_columns = list(df.select_dtypes(include=['object']))
+        df_removed = df.drop(columns = removed_columns)
+        return df_removed
