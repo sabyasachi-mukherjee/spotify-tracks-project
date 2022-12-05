@@ -1,5 +1,7 @@
 # Initialise main.py
 import pandas as pd
+from sklearn.utils import shuffle
+
 
 
 class DataTransformations:
@@ -20,8 +22,8 @@ class DataTransformations:
     def process(cls, df: pd.DataFrame) -> pd.DataFrame:
         df["popularity"] = df["popularity"].astype("category")
         removed_columns = list(df.select_dtypes(include=['object'])) # remove columns with data type object
-        df_removed = df.drop(columns = removed_columns)
-        return df_removed
+        df_removed = df.drop(columns = removed_columns).drop(columns=['release_date'])
+        return shuffle(df_removed) 
     
 
 
