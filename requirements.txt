@@ -3,3 +3,4 @@ matplotlib==3.6.0
 jupyter_client==7.4.4
 jupyter_core==4.11.2
 seaborn==0.12.1
+scikit-learn==1.1.3
