@@ -130,4 +130,3 @@ dmypy.json
 dataset/tracks.csv
 exploratory_analysis.ipynb
 plan.txt
-model_eval.ipynb
