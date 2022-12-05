@@ -22,3 +22,5 @@ This project has two objectives:
 2. Build a prediction model which predicts whether or not a track will hit a high threshold of popularity. This threshold we speak of is a popularity of 64 or more, the 90th percentile of popularity in tracks released in and after 2012. 
 
 Please look at EDA.ipynb for exploratory data analysis. 
+
+Some standard models are evaluated at model_eval.ipynb : this is WORK in PROGRESS.
