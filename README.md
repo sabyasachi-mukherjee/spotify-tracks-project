@@ -8,7 +8,7 @@
 python3.10 -m venv venv
 
 # Activate virtual environment.
-. venv/bin/activate
+. .\venv\Scripts\activate
 
 # Update pip
 pip install --upgrade pip
