@@ -11,8 +11,8 @@ python3.10 -m venv venv
 . .\venv\Scripts\activate
 
 # Update pip
-pip install --upgrade pip
-
+python.exe -m pip install --upgrade pip
+ 
 # Install necessary dependencies
 pip install -r requirements.txt
 ```
